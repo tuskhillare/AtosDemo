@@ -1,0 +1,29 @@
+package demo1;
+
+public class VAgrs {
+ void add(int ...a)
+ {
+	 int res=0;
+	 for(int x:a)
+	 {
+		 res=x+res;
+	 }
+	 System.out.println(res);
+ }
+
+
+
+
+ public static void main(String[] args) {
+	      VAgrs a = new VAgrs();
+	      a.add(22,2,3);
+	      a.add(101,10);
+	      a.add(200);
+ }
+ }
+ 
+ 
+ 
+ 
+
+

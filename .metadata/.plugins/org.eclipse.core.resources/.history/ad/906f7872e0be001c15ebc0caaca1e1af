@@ -1,0 +1,11 @@
+package demo1;
+
+//Java Method Overloading : If a class has multiple methods having same name but different in parameters, it is known as Method Overloading.
+
+public class MethOverLoad {
+
+	public static void main(String[] args) {
+
+	}
+
+}

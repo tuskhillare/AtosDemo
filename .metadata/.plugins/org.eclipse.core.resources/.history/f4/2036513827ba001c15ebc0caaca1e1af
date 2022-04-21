@@ -1,0 +1,33 @@
+package demo1;
+
+/*Rules for constructors
+ * 1. Same name as class name
+ * 2. Does not have any return type 
+ * 3. Constructor will be created automatically as we create obj. 
+ */
+ class Constructors {
+	int num1;
+	int num2;
+	int result;
+	 
+	
+ public Constructors(int n) {
+     num1 = n;
+     num2 = n;
+ }
+ 
+ public Constructors(double d,int n) {
+    num1 = (int)d;
+    num2 = n;
+ System.out.println("this is a constructor");
+ }
+ 
+ //public Constructors(double )
+//;
+    public class Constructors {
+	public static void main(String[] args) {
+		Constructors obj = new Constructors(n);
+	}
+
+}
+ }

@@ -1,0 +1,44 @@
+package com.connections;
+
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import oracle.jdbc.OracleDriver;
+
+
+public class Demo {
+	    ResultSet rs;
+	    Statement s;
+			public static void main(String[] args) {
+				// TODO Auto-generated method stub
+
+				try {
+					DriverManager.registerDriver(new OracleDriver()); //This is for loading the odbc driver
+					System.out.println("Driver loaded Successfully");  
+					DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/XE","system","tushar88"); //connecting to the database
+					System.out.println("Connection Successful");
+				} catch (SQLException e) {
+					System.out.println("Some problem in connection");
+
+
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}		
+	}
+			
+			void loadData() throws SQLException
+			{
+				String x="select * from cart";
+				rs=s.executeQuery(x);
+				while(rs.next())
+				{
+					System.out.print(rs.getInt("CART_ID")+"\t");
+					System.out.print(rs.getDate("ORDER_DATE")+"\t");
+					System.out.println(rs.getString("CART_STATUS"));
+				}
+				
+			}
+}
+

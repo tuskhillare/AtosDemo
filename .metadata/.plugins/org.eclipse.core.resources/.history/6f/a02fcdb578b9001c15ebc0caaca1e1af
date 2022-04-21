@@ -1,0 +1,14 @@
+package demo;
+
+public class IfElse {
+
+	public static void main(String[] args) {
+		int number = 20;
+		if (number < 22) {
+		  System.out.println("Good day.");
+		} else {
+		  System.out.println("Good evening.");
+		}
+	}
+
+}
